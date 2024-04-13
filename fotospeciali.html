@@ -1,0 +1,268 @@
+
+<!DOCTYPE html>
+<html >
+    <head>
+        <title>sito css</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel=”icon” href=”logo.ico” type=”ico” />
+        <script type="text/javascript" src="javafotospec.js"></script>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #ff0077;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 100px 50px;
+    padding: 100px 50px;
+}
+
+.container .card {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 350px;
+    max-width: 100%;
+    height: 300px;
+    background: #FFF;
+    border-radius: 20px;
+    transition: 0.5s;
+    box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
+}
+
+.container .card:hover {
+    height: 400px;
+}
+
+.container .card .img-box {
+    position: absolute;
+    top: 20px;
+    width: 300px;
+    height: 220px;
+    background: #333;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.container .card:hover .img-box {
+    top: -100px;
+    scale: 0.75;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+}
+
+.container .card .img-box img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.container .card .content {
+    position: absolute;
+    top: 252px;
+    width: 100%;
+    height: 35px;
+    padding: 0 30px;
+    text-align: center;
+    overflow: hidden;
+    transition: 0.5s;
+}
+.container .card:hover .content {
+    top: 130px;
+    height: 250px;
+}
+
+.container .card .content h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--clr);
+}
+
+.container .card .content p {
+    color: #333;
+}
+
+.container .card .content a {
+    position: relative;
+    top: 15px;
+    display: inline-block;
+    padding: 12px 25px;
+    text-decoration: none;
+    background: var(--clr);
+    color: #FFF;
+    font-weight: 500;
+}
+
+.container .card .content a:hover {
+    opacity: 0.8;
+}
+
+@media (max-width: 580px) {
+    .container .card {
+        width: 320px;
+        border-radius: 15px;
+    }
+
+    .container .card .img-box {
+        width: 285px;
+        border-radius: 10px;
+    }
+
+    .container .card .content p {
+        font-size: 0.6rem;
+    }
+
+    .container .card .content a {
+        font-size: 0.7rem;
+    }
+}
+.checkboxtoggler {
+  width: 3em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7em;
+  cursor: pointer;
+}
+
+.line-1, .line-2, .line-3 {
+  background: #e3fc00;
+  height: 0.3em;
+  border-radius: 10em;
+  transition-duration: 500ms;
+}
+
+#toggleChecker {
+  height: 3em;
+  width: 100%;
+  display: none;
+}
+
+#toggleChecker:checked + #togglerLable .checkboxtoggler .line-1 {
+  -webkit-transform: rotate(45deg) translateY(0.7em) translateX(0.7em);
+  -ms-transform: rotate(45deg) translateY(0.7em) translateX(0.7em);
+  transform: rotate(45deg) translateY(0.7em) translateX(0.7em);
+}
+
+#toggleChecker:checked + #togglerLable .checkboxtoggler .line-2 {
+  -webkit-transform: rotate(-45deg) translateY(0em) translateX(0.1em);
+  -ms-transform: rotate(-45deg) translateY(0em) translateX(0.1em);
+  transform: rotate(-45deg) translateY(0em) translateX(0.1em);
+}
+
+#toggleChecker:checked + #togglerLable .checkboxtoggler .line-3 {
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.menu {
+  display: none;
+  position: absolute;
+  top: 50px; /* Posiziona il menu sotto l'icona */
+  left: 0;
+  background-color: #fff;
+  padding: 10px;
+  border: 1px solid #df6447;
+  border-radius: 25px;
+}
+.menu ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.menu ul li {
+  margin-bottom: 10px;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+}
+
+.menu ul li a:hover {
+  color: #df6447;
+}
+
+#toggleChecker:checked + #togglerLable ~ .menu {
+  display: block; /* Mostra il menu quando il toggle è checked */
+}
+
+
+        </style>
+    </head>
+    <body>
+        <input id="toggleChecker" type="checkbox">
+        <label id="togglerLable" for="toggleChecker">
+          <div class="checkboxtoggler">
+            <div class="line-1"></div>
+            <div class="line-2"></div>
+            <div class="line-3"></div>
+          </div>
+        </label>
+        <div class="menu">
+          <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="foto.html">FOTO</a></li>
+            <li><a href="premesse.html">PREMESSE</a></li>
+            <li><a href="diario.html">DIARIO</a></li>
+          </ul>
+        </div>
+        
+    <div class="container">
+        <div class="card" style="--clr: #009688">
+            <div class="img-box">
+                <img src="40(18giugno2023).jpg">
+            </div>
+            <div class="content">
+                <h2>La vacanza più bella</h2>
+                <p>
+   
+                </p>
+                <a href="fotospeciale1.html">LEGGI IL MOTIVO</a>
+            </div>
+        </div>
+        <div class="card" style="--clr: #FF3E7F">
+            <div class="img-box">
+                <img src="56(11novembre2023).jpg">
+            </div>
+            <div class="content">
+                <h2>La miglior festa</h2>
+                <a href="fotospeciale2.html">LEGGI IL MOTIVO</a>
+            </div>
+        </div>
+        <div class="card" style="--clr: #03A9F4">
+            <div class="img-box">
+                <img src="80(15marzo2024).jpg">
+            </div>
+            <div class="content">
+                <h2>La perfezione</h2>
+
+                <a href="fotospeciale3.html">LEGGI IL MOTIVO</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

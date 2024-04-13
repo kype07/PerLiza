@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html >
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <title>sito css</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel=”icon” href=”logo.ico” type=”ico” />
+        <style>
+            @import url("https://fonts.googleapis.com/css2?family=Shantell+Sans");
+
+:root {
+  --animBlur-variable: 0px;
+  --animGray-variable: 0;
+  --animColor-variable: 0deg;
+  --animGradient-variable: 100%;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-shadow: 1px 1px 1px black;
+}
+html,
+body {
+  overscroll-behavior-x: none;
+  overscroll-behavior-y: none;
+}
+body {
+  color: #fff;
+  background: black;
+  position: relative;
+  font-family: "Shantell Sans", serif;
+  font-size: max(18px, 2.3vw);
+}
+section {
+  display: block;
+  min-height: 100vh;
+  padding: 3vw 8vw;
+  z-index: 1;
+}
+footer {
+  border-top: 4px dotted white;
+  margin: 2vw 10vw;
+  padding-top: 2vw;
+  text-align: center;
+}
+h1 {
+  font-size: 8vw;
+  font-weight: 600;
+  margin: 3vw 0;
+  text-align: center;
+}
+h2 {
+  color: hsl(var(--animColor-variable), 100%, 70%);
+}
+a {
+  color: #fff;
+}
+.separate {
+  display: block;
+  text-align: center;
+  margin: 0;
+  color: white;
+}
+.symbol {
+  font-family: serif;
+  position: relative;
+  font-size: 35px;
+  width: 35px;
+  height: 35px;
+  display: inline-block;
+  line-height: 1;
+}
+p {
+  margin: 2rem 0;
+  line-height: 1.5;
+  min-height: 100vh;
+  z-index: 1;
+}
+section:not(#thanks) p:first-letter {
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: hsl(var(--animColor-variable), 100%, 70%);
+  /*
+  color: slategray;
+  margin: 0 1rem 0.3rem 0;
+  font-family: "Fleur De Leah", serif;
+  -webkit-initial-letter: 3;
+  initial-letter: 3;
+*/
+}
+#thanks {
+  text-align: center;
+}
+.bg {
+  z-index: -1;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top 10% center;
+}
+.img1 {
+  background-image: url(https://images.unsplash.com/photo-1518895949257-7621c3c786d7?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODQzMjcxMDh8&ixlib=rb-4.0.3&q=85);
+  filter: blur(var(--animBlur-variable)) grayscale(var(--animGray-variable));
+}
+
+.img2 {
+  background-image: url(https://happy358.github.io/Images/flower/rose.png);
+  filter: hue-rotate(var(--animColor-variable));
+}
+.img2:before {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  content: "";
+  background: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0) var(--animGradient-variable),
+    rgba(0, 0, 0, 0.5) 100%
+  );
+  z-index: 0;
+}
+
+@media (max-width: 580px) {
+    .container .card {
+        width: 320px;
+        border-radius: 15px;
+    }
+
+    .container .card .img-box {
+        width: 285px;
+        border-radius: 10px;
+    }
+
+    .container .card .content p {
+        font-size: 0.6rem;
+    }
+
+    .container .card .content a {
+        font-size: 0.7rem;
+    }
+}
+.checkboxtoggler {
+  width: 3em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7em;
+  cursor: pointer;
+}
+
+.line-1, .line-2, .line-3 {
+  background: #df6447;
+  height: 0.3em;
+  border-radius: 10em;
+  transition-duration: 500ms;
+}
+
+#toggleChecker {
+  height: 3em;
+  width: 100%;
+  display: none;
+}
+
+#toggleChecker:checked + #togglerLable .checkboxtoggler .line-1 {
+  -webkit-transform: rotate(45deg) translateY(0.7em) translateX(0.7em);
+  -ms-transform: rotate(45deg) translateY(0.7em) translateX(0.7em);
+  transform: rotate(45deg) translateY(0.7em) translateX(0.7em);
+}
+
+#toggleChecker:checked + #togglerLable .checkboxtoggler .line-2 {
+  -webkit-transform: rotate(-45deg) translateY(0em) translateX(0.1em);
+  -ms-transform: rotate(-45deg) translateY(0em) translateX(0.1em);
+  transform: rotate(-45deg) translateY(0em) translateX(0.1em);
+}
+
+#toggleChecker:checked + #togglerLable .checkboxtoggler .line-3 {
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.menu {
+  display: none;
+  position: absolute;
+  top: 50px; /* Posiziona il menu sotto l'icona */
+  left: 0;
+  background-color: #fff;
+  padding: 10px;
+  border: 1px solid #df6447;
+  border-radius: 25px;
+}
+.menu ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.menu ul li {
+  margin-bottom: 10px;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+}
+
+.menu ul li a:hover {
+  color: #df6447;
+}
+
+#toggleChecker:checked + #togglerLable ~ .menu {
+  display: block; /* Mostra il menu quando il toggle è checked */
+}
+        </style>
+    </head>
+<div class="bg img1"></div>
+<div class="bg img2"></div>
+<input id="toggleChecker" type="checkbox">
+<label id="togglerLable" for="toggleChecker">
+  <div class="checkboxtoggler">
+    <div class="line-1"></div>
+    <div class="line-2"></div>
+    <div class="line-3"></div>
+  </div>
+</label>
+<div class="menu">
+  <ul>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <li><a href="index.html">HOME</a></li>
+    <li><a href="foto.html">FOTO</a></li>
+    <li><a href="premesse.html">PREMESSE</a></li>
+    <li><a href="diario.html">DIARIO</a></li>
+    <li><a href="fotospeciali.html">FOTO SPECIALI</a></li>
+  </ul>
+</div>
+<h1>LA MIGLIOR FESTA</h1>
+<section class="section">
+<p>"Per molte persone, potresti sembrare poco attraente, soprattutto per il tuo viso, poiché lo trovano troppo mascolino e con troppe imperfezioni. Ma per me non è così. Fin da quando eri piccola, hai sempre avuto un viso bellissimo, e crescendo, sei solo migliorata. A differenza mia, che mi sento sempre più brutto :( 
+  
+  Inoltre, ciò che per gli altri sono imperfezioni, per me sono caratteristiche uniche che ti distinguono dalla massa. È per questo che credo fermamente che tu sia la ragazza perfetta in termini di bellezza, o almeno secondo i miei gusti. Per me, le tue caratteristiche, come il tuo viso, e in modo discreto, anche il tuo corpo, che non è né troppo grande né troppo piccolo ma perfetto, così come il tuo seno, sono ciò che ti rende bellissima. Ecco perché ho scelto proprio questa foto per rappresentare la tua bellezza, nonostante sia piena di imperfezioni. Spero tu possa capire e apprezzare il mio punto di vista, anche se so di non essere nessuno di importante e sicuramente non abbastanza per te. Tu meriti il meglio, e purtroppo, nonostante ci provi con tutte le mie forze, so di non essere all'altezza."</p>
+</section>
+
+  <footer>
+    <div class="separate"><span class="symbol">&#10059;</span></div>
+    <div>Sciuto Nicolò</div>
+  </footer>
+</section>
+<script>window.onload = function () {
+    "use strict";
+    // scroll filter
+    let height = 0;
+    document.addEventListener("scroll", function () {
+      height = document.body.clientHeight;
+      height -= window.innerHeight;
+      let scrollAmount = window.pageYOffset;
+      scrollAmount = scrollAmount / height;
+      /*    document.documentElement.style.setProperty(
+        "--animBlur-variable",
+        scrollAmount * 3 + 0 + "px"
+      );
+  */ document.documentElement.style.setProperty(
+        "--animGray-variable",
+        scrollAmount
+      );
+      document.documentElement.style.setProperty(
+        "--animColor-variable",
+        scrollAmount * -360 + "deg"
+      );
+      document.documentElement.style.setProperty(
+        "--animGradient-variable",
+        (1 - scrollAmount) * 100 + "%"
+      );
+    });
+    window.addEventListener("resize", function () {
+      height = document.body.clientHeight;
+      height -= window.innerHeight;
+    });
+  };</script>
+</html>

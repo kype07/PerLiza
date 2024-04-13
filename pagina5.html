@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Diary Page</title>
+<style>body {
+    background-image: url('legno.avif');
+    background-size: cover; /* Per adattare l'immagine allo schermo */
+    background-repeat: no-repeat; /* Per evitare la ripetizione dell'immagine */
+    font-family: Arial, sans-serif;
+  
+    margin: 0;
+    padding: 0;
+  }
+  body {
+  font-family: Arial, sans-serif;
+
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  
+    justify-items: center;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: left;
+  border-left: 2px solid #333; /* bordo sinistro */
+  border-right: 2px solid #333; /* bordo destro */
+  border-bottom: 2px solid #333; /* bordo inferiore */
+  border-top: 2px solid #333; /* bordo superiore */
+  background-color: #fff; /* colore di sfondo del contenitore */
+  
+}
+
+.header2{
+    background-color: #fff; /* Colore di sfondo dell'intestazione */
+   
+}
+
+.header1 {
+  background-color: #fff; /* Colore di sfondo dell'intestazione */
+  border-bottom: 2px solid #333; /* linea inferiore */
+  padding: 10px 0; /* spaziatura all'interno dell'intestazione */
+}
+
+.date {
+  text-align: center; /* centratura del testo */
+}
+
+h1 {
+  margin-top: 20px; /* spazio sopra al titolo */
+  margin-bottom: 20px;
+}
+
+.diary-entry p {
+  margin-bottom: 10px;
+}
+
+.page-top,
+.page-bottom {
+  margin-top: 20px; /* spazio sopra alla riga di fine pagina */
+} 
+
+.checkboxtoggler {
+  width: 3em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7em;
+  cursor: pointer;
+}
+
+.line-1, .line-2, .line-3 {
+  background: #4947df;
+  height: 0.3em;
+  border-radius: 10em;
+  transition-duration: 500ms;
+}
+
+#toggleChecker {
+  height: 3em;
+  width: 100%;
+  display: none;
+}
+
+#toggleChecker:checked + #togglerLable .checkboxtoggler .line-1 {
+  -webkit-transform: rotate(45deg) translateY(0.7em) translateX(0.7em);
+  -ms-transform: rotate(45deg) translateY(0.7em) translateX(0.7em);
+  transform: rotate(45deg) translateY(0.7em) translateX(0.7em);
+}
+
+#toggleChecker:checked + #togglerLable .checkboxtoggler .line-2 {
+  -webkit-transform: rotate(-45deg) translateY(0em) translateX(0.1em);
+  -ms-transform: rotate(-45deg) translateY(0em) translateX(0.1em);
+  transform: rotate(-45deg) translateY(0em) translateX(0.1em);
+}
+
+#toggleChecker:checked + #togglerLable .checkboxtoggler .line-3 {
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.menu {
+  display: none;
+  position: absolute;
+  top: 50px; /* Posiziona il menu sotto l'icona */
+  left: 0;
+  background-color: #fff;
+  padding: 10px;
+  border: 1px solid #4947df;
+  border-radius: 25px;
+}
+.menu ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.menu ul li {
+  margin-bottom: 10px;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+}
+
+.menu ul li a:hover {
+  color: #4947df;
+}
+
+#toggleChecker:checked + #togglerLable ~ .menu {
+  display: block; /* Mostra il menu quando il toggle è checked */
+}
+hr {
+  border: none;
+  border-top: 2px solid #333; /* Riga come fine della pagina */
+}
+.end-of-page {
+  border: none;
+  border-top: 2px solid #333; /* Riga come fine della pagina */
+}
+.pagination {
+    display: flex;
+  justify-content: center;
+}
+  </style>
+</head>
+<body >
+    <br>
+    <br>
+    <div class="bg img1"></div>
+    <div class="bg img2"></div>
+    <input id="toggleChecker" type="checkbox">
+    <label id="togglerLable" for="toggleChecker">
+      <div class="checkboxtoggler">
+        <div class="line-1"></div>
+        <div class="line-2"></div>
+        <div class="line-3"></div>
+      </div>
+    </label>
+    <div class="menu">
+      <ul>
+
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="foto.html">FOTO</a></li>
+        <li><a href="premesse.html">PREMESSE</a></li>
+        <li><a href="diario.html">DIARIO</a></li>
+        <li><a href="fotospeciali.html">FOTO SPECIALI</a></li>
+      </ul>
+    </div>
+<div class="container">
+  <header class="header1">
+    <div class="date">
+      <p style="text-align: right;"> lunedì 18 dicembre 2023</p>
+    </div>
+  </header>
+
+  <h1>DIARIO PERSONALE</h1>
+  <div class="diary-entry">
+    <p>caro diario ti scrivo oggi a distanza di un po di settimane perché ancora una volta ho bisogno
+        di sfogarmi perché non so davvero cosa fare in questi giorni mi sento perso come non mai e
+        non solo perché nonostante io mi impegni tantissimo e do il 300% dell’impegno a scuola ho
+        comunque in un paio di materie la media del 3/4 ma anche a livello emotivo non so cosa
+        fare mi da un po di tempo mi sentivo con una ragazza e stava andando bene fino a quando
+        3 giorni fa rileggendo parte dei messaggi e del diario stesso non mi sono ritornati in mente
+        dei sentimenti che nonostante io cerchi di reprimere e di sigillare dentro di me continuano
+        inesorabilmente a venire fuori e sto parlando dei sentimenti verso liza e questo cosa
+        comporta che io mi sento molto confuso perché non so se riesco a reprimerli per poter
+        portare avanti la possibile relazione con questa ragazza ma allo stesso tempo sono sicuro al
+        100% che a liza non piaccio non sono mai piaciuto e non gli piacerò mai e di conseguenza
+        sarebbe inutile aspettare qualcosa che non passerà mai. ti giuro che non so che fare perché
+        io non voglio tagliare i legami con liza anche perché tralasciando che mi piace la trovo una
+        splendida amica anzi forse l'unica che abbia mai avuto davvero. e nonostante uno dei miei
+        desideri più grandi sia quello di vederla nuda perché come e stupenda con i vestiti sono
+        sicuro lo sia anche senza in fondo in fondo non me ne frega assolutamente nulla per me
+        potremmo anche essere sposati o fidanzati e non esserci mai visti nudi e mi andrebbe
+        benissimo tutto questo per dirti caro diario che davvero la vita è una merda perché non solo
+        mi fa innamorare di una ragazza che non ricambierà mai i miei sentimenti ma non me la fa
+        neanche dimenticare perche e da quando lo vista la prima volta che mi sono innamorato e
+        non ho mai smesso in più tutti i miei sforzi di andare bene a scuola non sono mai vanificati
+        anzi viene sempre preteso da me di più di quello che io fisicamente possa mai dare.
+        insomma caro diario la mia vita potremmo descriverla come del ghiaccio in un bicchiere di
+        acqua come anche il mio cuore che ormai non è nient'altro che della polvere fine fine da
+        quante volte si è sgretolato e da quante volte io abbia provato a ricomporlo e non so se avrò
+        ancora la forza mentale per farlo. detto questo mi sento già meglio e ti dico ancora una
+        premessa caro diario perché se tutto questo sta accadendo a me non e sicuramente colpa di
+        liza anzi liza e forse l'unica persona che riesce ancora a strapparmi un sorriso sincero e
+        quindi io gli auguro il meglio che sicuramente non sono io anche perche chi e che vorrebbe
+        stare con una persona brutta come me io spero vivamente che si trovi un bel marito e che
+        abbia una vita felice detto questo mi scuso come al solito per averti annoiato con i miei
+        pensieri orribili ti saluto e ti scriverò quando ne avrò bisogno a presto caro diario.
+    </p>    
+  </div>
+  
+  <hr class="page-top"> <!-- Riga come bordo superiore della pagina -->   
+
+  <header class="header2">
+    <div class="data">
+      <ul style="border-color: chocolate;" class="pagination">
+        <li class="page-item active "><a style="background-color: white; border-color: white; color: black;border-color: chocolate;" 
+          class="page-link" href="diario.html">1</a></li>
+          <li class="page-item active "><a style="background-color: white; border-color: white; color: black;border-color: chocolate;"
+            class="page-link" href="pagina2.html">2</a></li>
+            <li class="page-item "><a style="background-color: white; border-color: white; color: black;border-color: chocolate;"
+           class="page-link" href="pagina3.html">3</a></li>
+           <li class="page-item "><a style="background-color: white; border-color: white; color:black;border-color: chocolate;" 
+           class="page-link" href="pagina4.html">4</a></li>
+           <li class="page-item "><a style="background-color: chocolate; border-color: chocolate; color:white;border-color: chocolate;" 
+            class="page-link" href="pagina5.html">5</a></li>
+            <li class="page-item "><a style="background-color: white; border-color: white; color:black;border-color: chocolate;" 
+                class="page-link" href="pagina6.html">6</a></li>
+        
+      </ul>
+    </div>
+  </header>
+</div>
+<br>
+<br>
+<div class="prepostpagna">
+
+</div>
+</body>
+</html>
