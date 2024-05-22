@@ -220,7 +220,13 @@ section:not(#thanks) p:first-letter {
 .menu ul li a:hover {
   color: #df6447;
 }
-
+@media screen and (max-width: 600px) { 
+  .column.side, .column.middle, img{
+    width: 100%;
+    
+  }
+  
+}
 #toggleChecker:checked + #togglerLable ~ .menu {
   display: block; /* Mostra il menu quando il toggle è checked */
 }

@@ -114,7 +114,13 @@ section:not(#thanks) p:first-letter {
   background-image: url(https://images.unsplash.com/photo-1518895949257-7621c3c786d7?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODQzMjcxMDh8&ixlib=rb-4.0.3&q=85);
   filter: blur(var(--animBlur-variable)) grayscale(var(--animGray-variable));
 }
-
+@media screen and (max-width: 600px) { 
+  .column.side, .column.middle, img{
+    width: 100%;
+    
+  }
+  
+}
 .img2 {
   background-image: url(https://happy358.github.io/Images/flower/rose.png);
   filter: hue-rotate(var(--animColor-variable));

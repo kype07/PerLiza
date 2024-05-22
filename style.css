@@ -24,4 +24,10 @@ body {
     background-image: url('sfondo.jpg'); /* Sostituisci 'percorso/immagine.jpg' con il percorso dell'immagine nel tuo progetto */
     background-size: cover; /* Per fare in modo che l'immagine copra l'intera pagina */
 }
-
+@media screen and (max-width: 600px) { 
+    .column.side, .column.middle, img{
+      width: 100%;
+      
+    }
+    
+  }

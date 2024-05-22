@@ -216,3 +216,10 @@ figure > div {
 		grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
 	}
 }
+@media screen and (max-width: 600px) { 
+	.column.side, .column.middle, img{
+	  width: 100%;
+	  
+	}
+	
+  }
