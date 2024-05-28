@@ -1,74 +1,86 @@
 <!DOCTYPE html>
-<html >
-    <head>
-        <link rel="stylesheet" href="style.css">
-        <title>sito css</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel=”icon” href=”logo.ico” type=”ico” />
-        
-        <style>
-@media screen and (max-width: 600px) { 
-  .column.side, .column.middle, img{
-    width: 100%;
-    
-  }
-  
-}
-@import url("https://fonts.googleapis.com/css2?family=Shantell+Sans");
-body, html {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  font-family: "Shantell Sans", serif;
-}
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>sito css</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="logo.ico" type="ico" />
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Shantell+Sans");
 
-.container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  height: 100%;
-}
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: "Shantell Sans", serif;
+            background: url('sfondo.jpg') no-repeat center center fixed; /* Sostituisci 'your-image.jpg' con il percorso della tua immagine */
+            background-size: cover; /* Adatta l'immagine di sfondo alla pagina */
+        }
 
-.button {
-  padding: 30px 20px;
-  margin: 10px;
-  background-color: transparent;
-  color: #ffffff;
-  font-size: 34px;
-  border: none;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-  display: flex;
-  align-items: center;
-}
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start; /* Allineamento a sinistra */
+            height: 100%;
+            padding: 20px; /* Padding per evitare che il contenuto tocchi i bordi dello schermo */
+        }
 
-.button:hover span {
-  transform: scale(1.1);
-}
+        .button {
+            padding: 15px 20px; /* Ridotto padding per schermi piccoli */
+            margin: 10px;
+            background-color: transparent;
+            color: #ffffff;
+            font-size: 24px; /* Ridotta dimensione del font per schermi piccoli */
+            border: none;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            display: flex;
+            align-items: center;
+        }
 
-.button span {
-  margin-left: 10px;
-  transition: transform 0.3s ease, color 0.3s ease;
-}
+        .button span {
+            margin-left: 10px;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
 
-.button:hover {
-  color: #eb1857;
-}
-        </style>
-    </head>
-    <body style="background-color: #eb1857;">
-        <div class="container">
-            <p style=" background-color: #ffffff3a; color: #922e2e;font-size: 34px;">PRIMA DI GUARDARE LE SEZIONI FOTO E DIARIO TI CHIEDO SOLO DI LEGGERE LA SEZIONE PREMESSE</p>
-            <a style="  text-decoration: none;" href="premesse.html" class="button" id="button1"><span>PREMESSE</span></a>
-            <a style="  text-decoration: none;" href="diario.html" class="button" id="button2"><span>DIARIO</span></a>
-            <a style="  text-decoration: none;"href="foto.html" class="button" id="button3"><span>FOTO</span></a>
-          </div>
-          
-        
-     
-     
-      
-    </body>
+        .button:hover span {
+            transform: scale(1.1);
+        }
+
+        .button:hover {
+            color: #eb1857;
+        }
+
+        p {
+            background-color: #ffffff3a;
+            color: #922e2e;
+            font-size: 24px; /* Ridotta dimensione del font per schermi piccoli */
+            padding: 10px;
+            border-radius: 8px; /* Aggiunto bordo arrotondato per migliorare l'estetica */
+        }
+
+        @media screen and (max-width: 600px) {
+            .button {
+                font-size: 18px; /* Ulteriore riduzione della dimensione del font per schermi molto piccoli */
+                padding: 10px 15px; /* Riduzione del padding per schermi molto piccoli */
+            }
+
+            p {
+                font-size: 18px; /* Ridotta dimensione del font per schermi piccoli */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p>PRIMA DI GUARDARE LE SEZIONI FOTO E DIARIO TI CHIEDO SOLO DI LEGGERE LA SEZIONE PREMESSE</p>
+        <a href="premesse.html" class="button" id="button1"><span>PREMESSE</span></a>
+        <a href="diario.html" class="button" id="button2"><span>DIARIO</span></a>
+        <a href="foto.html" class="button" id="button3"><span>FOTO</span></a>
+        <a href="song.html" class="button" id="button4"><span>CANZONE DEDICATE</span></a>
+    </div>
+</body>
 </html>
+
