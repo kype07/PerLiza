@@ -173,3 +173,19 @@ nav .circle {
     }
 }
 
+
+/* Style for the close button inside the side menu */
+.close-button {
+    text-align: right;
+    cursor: pointer;
+    margin-bottom: 10px;
+    color: #f53192;
+}
+
+.close-button i {
+    font-size: 20px;
+    background: #fff;
+    border-radius: 50%;
+    padding: 5px;
+    box-shadow: 0 5px 10px rgba(255, 26, 26, 0.22);
+}
